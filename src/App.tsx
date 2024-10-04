@@ -1,5 +1,12 @@
+import { GlobalStyle, Container } from './global'
+
 function App() {
-  return <div className="App">Olá mundo</div>
+  return (
+    <>
+      <GlobalStyle />
+      <Container className="App">Olá mundo</Container>
+    </>
+  )
 }
 
 export default App
