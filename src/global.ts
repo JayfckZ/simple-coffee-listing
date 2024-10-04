@@ -1,4 +1,5 @@
 import { styled, createGlobalStyle } from 'styled-components'
+import bgImage from './media/bg-cafe.jpg'
 
 export const colors = {
   darkGray: '#1B1D1F',
@@ -16,11 +17,14 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: "DM Sans", sans-serif;
-    color: ${colors.white}
+    color: ${colors.white};
   }
 
   body {
     background-color: ${colors.black};
+    background-image: url(${bgImage});
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 `
 
