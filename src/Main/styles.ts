@@ -20,6 +20,7 @@ export const MainContainer = styled.main`
     justify-content: center;
     align-items: center;
     gap: 8px;
+    margin-bottom: 16px;
   }
 `
 
@@ -45,4 +46,10 @@ export const Button = styled.button<Props>`
   border-radius: 8px;
   cursor: pointer;
   transition: all ease 0.3s;
+`
+
+export const CardGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px 32px;
 `
