@@ -17,6 +17,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: "DM Sans", sans-serif;
+    font-weight: bold;
     color: ${colors.white};
   }
 
@@ -24,7 +25,7 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${colors.black};
     background-image: url(${bgImage});
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
   }
 `
 
