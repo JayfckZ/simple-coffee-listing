@@ -11,6 +11,11 @@ export const colors = {
   red: '#ED735D'
 }
 
+export const breakpoints = {
+  tablet: '1024px',
+  mobile: '640px'
+}
+
 export const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
@@ -33,4 +38,8 @@ export const Container = styled.div`
   max-width: 1024px;
   width: 100%;
   margin: 0 auto;
+
+  @media (width <= ${breakpoints.tablet}) {
+    max-width: 80%;
+  }
 `

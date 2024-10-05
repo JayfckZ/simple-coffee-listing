@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Card from '../Card'
+import Loader from '../Loader'
 import { MainContainer, Heading, Body, Button, CardGrid } from './styles'
 
 const Main = () => {
@@ -52,15 +53,15 @@ const Main = () => {
           Available Now
         </Button>
       </div>
-      <CardGrid>
-        {loading ? (
-          <p>Loading...</p>
-        ) : (
-          filteredCoffeeData.map((coffee: Coffee) => (
+      {loading ? (
+        <Loader />
+      ) : (
+        <CardGrid>
+          {filteredCoffeeData.map((coffee: Coffee) => (
             <Card key={coffee.id} {...coffee} />
-          ))
-        )}
-      </CardGrid>
+          ))}
+        </CardGrid>
+      )}
     </MainContainer>
   )
 }
