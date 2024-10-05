@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../global'
+import { colors, breakpoints } from '../global'
 import vector from '../media/vector.svg'
 
 type Props = {
@@ -39,6 +39,14 @@ export const Body = styled.p`
   width: 55%;
   margin: 16px 0;
   color: ${colors.gray};
+
+  @media (width <= ${breakpoints.tablet}) {
+    width: 95%;
+  }
+
+  @media (width <= ${breakpoints.mobile}) {
+    /* width: 55%; */
+  }
 `
 
 export const Button = styled.button<Props>`
@@ -56,4 +64,13 @@ export const CardGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 24px 32px;
+
+  @media (width <= ${breakpoints.tablet}) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (width <= ${breakpoints.mobile}) {
+    margin: 0 16px;
+    grid-template-columns: 1fr;
+  }
 `
