@@ -10,7 +10,7 @@ export const MainContainer = styled.main`
   background-color: ${colors.darkGray};
   background-image: url(${vector});
   background-repeat: no-repeat;
-  background-position-x: 70%;
+  background-position: 70% 5%;
   border-radius: 8px;
   margin: 15% 0;
   padding: 36px;
@@ -31,6 +31,7 @@ export const MainContainer = styled.main`
 export const Heading = styled.h1`
   font-size: 2rem;
   text-align: center;
+  margin-top: 48px;
 `
 
 export const Body = styled.p`
